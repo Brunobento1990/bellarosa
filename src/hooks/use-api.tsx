@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { ISessionInfo, useSessionInfo } from "./use-session-info";
 
 function getSocket() {
-    const baseUrl = "https://localhost:7082/api/"
-    //const baseUrl = "https://api-server.shop/api/"
+    //const baseUrl = "https://localhost:7082/api/"
+    const baseUrl = "https://api-server.shop/api/"
     const localAuth = localStorage.getItem('token');
     const auth = localAuth ? localAuth : '';
 
