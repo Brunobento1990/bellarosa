@@ -5,16 +5,17 @@ import { Favoritos } from "./pages/favoritos";
 import { MinhaConta } from "./pages/minhaconta";
 import { PageCarrinho } from "./pages/carrinho";
 import { Login } from "./pages/login";
+import { Layout } from './componets/layout'
 
-export function AppRoutes(){
+export function AppRoutes() {
     return (
         <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/categorias' element={<Categorias />} />
-            <Route path='/favoritos' element={<Favoritos />} />
-            <Route path='/minha-conta' element={<MinhaConta />} />
-            <Route path='/carrinho' element={<PageCarrinho />} />
-            <Route path='/login' element={<Login />} />
+            <Route path='/' element={<Login />} />
+            <Route path='/categorias' element={<Layout><Categorias /></Layout>} />
+            <Route path='/favoritos' element={<Layout><Favoritos /></Layout>} />
+            <Route path='/minha-conta' element={<Layout><MinhaConta /></Layout>} />
+            <Route path='/carrinho' element={<Layout><PageCarrinho /></Layout>} />
+            <Route path='/home' element={<Layout><Home /></Layout>} />
         </Routes>
     );
 }

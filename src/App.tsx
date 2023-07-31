@@ -1,13 +1,16 @@
 import { BrowserRouter } from 'react-router-dom'
-import { Layout } from './componets/layout'
+
 import { AppRoutes } from './AppRoutes'
+import { useLoader } from './componets/loader';
 
 function App() {
+
+  const Loader = useLoader();
+
   return (
     <BrowserRouter>
-      <Layout>
-        <AppRoutes />
-      </Layout>
+      <Loader.Component />
+      <AppRoutes />
     </BrowserRouter>
   )
 }

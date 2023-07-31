@@ -10,7 +10,7 @@ export function PageCarrinho(){
     useEffect(() => {
         console.log(authApp.auth().token)
         if(!authApp.auth().token){
-            navigate('/login')
+            navigate('/')
         }
     },[])
     return(<p>carrinho</p>);
